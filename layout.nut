@@ -2,27 +2,29 @@
 // Attract-Mode Front-End - "Robospin Lynx" layout
 //
 class UserConfig {
-   </ label="SpinWheel", help="The artwork to spin", options="marquee,flyer,wheel" />
-   orbit_art="wheel";
-   </ label="Bloom Effect", help="Enable Bloom Effect (requires shader support)", options="Yes,No" />
-   enable_bloom="Yes";
-   </ label="Mask", help="Make background darker.", options="Yes,No" /> enable_Mask="Yes";
-   </ label="Dusty Screen", help="Integrates screen with dust and grain.", options="Yes,No" /> enable_dust="Yes";
-   </ label="Transition Time", help="Time in milliseconds for wheel spin." /> transition_ms="25";
+	</
+		label="SpinWheel",
+		help="The artwork to spin",
+		options="marquee,flyer,wheel"
+	/> orbit_art="wheel";
+	</
+		label="Mask",
+		help="Make background darker.",
+		options="Yes,No"
+	/> enable_Mask="Yes";
+	</
+		label="Dusty Screen",
+		help="Integrates screen with dust and grain.",
+		options="Yes,No"
+	/> enable_dust="Yes";
+	</
+		label="Transition Time",
+		help="Time in milliseconds for wheel spin."
+	/> transition_ms="25";
 }
 
 local my_config = fe.get_config();
 local no_shader = fe.add_shader( Shader.Empty );
-local yes_shader;
-if ( my_config["enable_bloom"] == "Yes" )
-{
-   yes_shader = fe.add_shader( Shader.Fragment, "bloom_shader.frag" );
-  yes_shader.set_texture_param("bgl_RenderedTexture");
-}
-else
-{
-   yes_shader = no_shader;
-}
 
 fe.layout.width=1920;
 fe.layout.height=1080;
