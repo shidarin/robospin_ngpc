@@ -12,7 +12,8 @@ Robospin NGPC
 Introduction
 ------------
 
-A robospin fork customized for Neo Geo Pocket and Pocket Color games.
+[Attract-Mode](http://attractmode.org/about.html) emulator layout based on the
+classic robospin theme. Customized for Neo Geo Pocket and Pocket Color games.
 Classic wheel design showcases snaps or videos in the Pocket's screen,
 as well as showing flyer and cart art.
 
